@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@700&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap%27');
+
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-button {
+  height: max-content;
+}
+
+
+/* ::-webkit-scrollbar-track {
+  background: #ffffff4d;
+  border-radius: 10px;
+} */
+
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.664);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: rgb(255, 255, 255);
+}
+
+
+
+
+body {
+    background-image: url('Images/stacked-waves-haikei.svg');
+    background-size: cover;
+
+    background-position: center;
+    background-attachment: fixed;
+
+    
+}
+
+.font-link {
+    font-family: 'Work Sans';
+  }
+
+.list {
+    color: white;
+    font-size: 50px;
+    
+    display: flex;
+    flex-direction: column;
+
+    margin: 0 auto;
+    width: 50%;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.todolist{
+    height: 500px;
+    overflow-y: scroll;
+    width: 500px;
+    background-color: rgba(0, 0, 0, 0.486);
+    border-radius: 15px;
+    padding: 30px;
+    
+}
