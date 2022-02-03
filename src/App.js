@@ -7,7 +7,9 @@ function App() {
   
   const NewTodoRef = useRef()
 
-  const [todos, updateTodos] = useState([])
+  const [todos, setTodos] = useState([])
+
+
 
   function HandleNewToDo(e) {
 
@@ -15,27 +17,29 @@ function App() {
     if (name === '')
       return
     console.log(name)
-    updateTodos([...todos,  {todoID: todos.length - 1, todoName: name, completed:false }])
+
+    setTodos([...todos,  {todoID: todos.length - 1, todoName: name, completed:false }])
+
+    //updateTodos((old) => [...old,  {todoID: old.length - 1, todoName: name, completed:false }])
+
     NewTodoRef.current.value = null
   }
 
-
   function HandleRemoveAllToDo(e) {
-    console.log('not implemented yet')
-    
+    if ([todos] !== [])
+    setTodos([])
   }
 
+ 
 
   return (
-    <>
-      
+    <div>
       <div>Online Custom CheckList</div>
-      <TodoList todoTask={todos}/>
+      <TodoList todoTask={todos} updateTodos={setTodos}/> 
       <input ref={NewTodoRef} type='text'/>
       <button onClick={HandleNewToDo}>Add Todo</button>
       <button onClick={HandleRemoveAllToDo}>Remove All</button>
-      
-    </>
+    </div>
     
   )
 }
