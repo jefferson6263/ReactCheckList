@@ -39,9 +39,12 @@ function App() {
 
       <TodoList todoTask={todos} updateTodos={setTodos}/> 
 
-      <input ref={NewTodoRef} type='text'/>
-      <button onClick={HandleNewToDo}>Add Todo</button>
-      <button onClick={HandleRemoveAllToDo}>Remove All</button>
+      <input className='TodoInput'ref={NewTodoRef} type='text'/>
+
+      
+      <button className='button'onClick={HandleNewToDo}>Add Todo</button>
+      <button className='button'onClick={HandleRemoveAllToDo}>Remove All</button>
+      
     </div>
     
   )
